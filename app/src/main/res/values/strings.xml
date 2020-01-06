@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AlliasApp</string>
+    <string name="start_game_btn">Start</string>
+    <string name="add_team_btn">ADD TEAM</string>
+    <string name="finish_tems_crt_btn">finish</string>
+    <string name="with_minus_str">with minus</string>
+</resources>
