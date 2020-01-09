@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -143,7 +144,7 @@ public class GameRoundActivity extends AppCompatActivity {
         CountDownTimer timer = new CountDownTimer(roundPeriod, SECOND) {
             public void onTick(long millisUntilFinished) {
                 //TODO : make cool timer
-                //Toast.makeText(getApplicationContext(),"Before Finsh : " + millisUntilFinished / 1000, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Before Finsh : " + millisUntilFinished / 1000, Toast.LENGTH_SHORT).show();
             }
 
             public void onFinish() {
