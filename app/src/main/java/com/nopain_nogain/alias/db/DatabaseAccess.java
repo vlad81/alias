@@ -34,10 +34,9 @@ public class DatabaseAccess {
         }
     }
 
-    //TODO: add all suitable methods
-    public List<String> getQuotes() {
+    public List<String> test() {
         List<String> list = new ArrayList<>();
-        Cursor cursor = database.rawQuery("SELECT * FROM quotes", null);
+        Cursor cursor = database.rawQuery("SELECT name FROM test_c_1", null);
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
             list.add(cursor.getString(0));

@@ -5,7 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
+
+import com.nopain_nogain.alias.db.DatabaseAccess;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,6 +17,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ListView listView = findViewById(R.id.listView);
+        DatabaseAccess inst = DatabaseAccess.getInstance(this);
+        inst.open();
+        listView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, inst.test()));
+        inst.close();
 
         Button button = findViewById(R.id.startGameBtn);
         button.setOnClickListener(new View.OnClickListener() {
