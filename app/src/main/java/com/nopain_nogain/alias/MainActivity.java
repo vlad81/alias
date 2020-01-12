@@ -18,12 +18,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ListView listView = findViewById(R.id.listView);
-        DatabaseAccess inst = DatabaseAccess.getInstance(this);
-        inst.open();
-        listView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, inst.test()));
-        inst.close();
-
         Button button = findViewById(R.id.startGameBtn);
         button.setOnClickListener(new View.OnClickListener() {
             @Override

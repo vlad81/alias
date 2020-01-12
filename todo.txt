@@ -1,0 +1,3 @@
+1. Display all categories from test_holder table.
+2. Add mechanism to get random words from all words list.
+3. Add holder for words in the game.
